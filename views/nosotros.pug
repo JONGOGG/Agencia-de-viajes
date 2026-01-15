@@ -1,0 +1,33 @@
+extends ./layout/index 
+
+block contenido     
+    main.container.mt-5     
+        .row.align-items-center
+            .col-md-5  
+                img(src="/img/nosotros.jpg", alt="Imagen sobre nosotros", class="img-fluid rounded")
+            .col-md-7
+                h1 #{pagina}
+
+                blockquote
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in mi venenatis, vulputate nunc quis, placerat nulla. Nam vulputate nisl eu tincidunt aliquam. Donec fringilla ex odio, eget interdum leo tincidunt vel.
+
+                p Nulla ac vulputate massa, eget gravida dolor. Praesent in arcu nulla. Duis tempor lacus sed suscipit malesuada. Cras commodo justo purus, vitae porta diam suscipit a.
+
+                p Praesent ultrices tellus a sagittis pellentesque. Phasellus faucibus nisl quis nisi malesuada feugiat. Phasellus nec nisi maximus, vehicula lacus eget, commodo elit.
+
+    .listado-iconos     
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p Praesent ultrices tellus a sagittis pellentesque. Phasellus faucibus nisl quis nisi malesuada feugiat. Phasellus nec nisi maximus, vehicula lacus eget, commodo elit.
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="icono destinos", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos
+                    p Praesent ultrices tellus a sagittis pellentesque. Phasellus faucibus nisl quis nisi malesuada feugiat. Phasellus nec nisi maximus, vehicula lacus eget, commodo elit.
+                .col-md-4
+                    img(src="img/icono_precios.svg", alt="icono precios", class="img-fluid mb-4")
+                    h2.mb-4 Los Mejores Precios
+                    p Praesent ultrices tellus a sagittis pellentesque. Phasellus faucibus nisl quis nisi malesuada feugiat. Phasellus nec nisi maximus, vehicula lacus eget, commodo elit.
+            

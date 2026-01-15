@@ -1,0 +1,77 @@
+extends ./layout/index 
+
+block contenido     
+  main.container.mt-5     
+    .row
+
+      // Imagen del viaje
+      .col-md-5  
+        img(
+          src=`/img/destinos_${viaje.imagen}_ln.jpg`,
+          alt="imagen viaje",
+          class="img-fluid rounded"
+        )
+
+      // Contenido del viaje
+      .col-md-7
+        h1.mb-3 #{viaje.titulo}
+
+        // Fecha del viaje
+        p
+          svg(
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ff2d55"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          )
+            path(d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z")
+            path(d="M16 3v4")
+            path(d="M8 3v4")
+            path(d="M4 11h16")
+
+          | #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+
+        // Disponibles
+        p
+          svg(
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ff2d55"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          )
+            path(d="M9 10a3 3 0 1 0 6 0")
+            path(d="M6 21v-1a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v1")
+            path(d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z")
+
+          | #{viaje.disponibles} disponibles
+
+        // Precio / Icono extra
+        p
+          svg(
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ff2d55"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          )
+            path(d="M11.453 8.056c0 -.623 .518 -.979 1.442 -.979c1.69 0 3.41 .343 4.605 .923l.5 -4c-.948 -.449 -2.82 -1 -5.5 -1c-1.895 0 -3.373 .087 -4.5 1c-1.172 .956 -2 2.33 -2 4c0 3.03 1.958 4.906 5 6c1.961 .69 3 .743 3 1.5c0 .735 -.851 1.5 -2 1.5c-1.423 0 -3.963 -.609 -5.5 -1.5l-.5 4c1.321 .734 3.474 1.5 6 1.5c2 0 3.957 -.468 5.084 -1.36c1.263 -.979 1.916 -2.268 1.916 -4.14c0 -3.096 -1.915 -4.547 -5 -5.637c-1.646 -.605 -2.544 -1.07 -2.544 -1.807z")
+
+          | #{viaje.precio} Dolares 
+
+        // Descripción
+        p.mb-4= viaje.descripcion
+

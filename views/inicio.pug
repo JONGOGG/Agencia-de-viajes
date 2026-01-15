@@ -1,0 +1,33 @@
+extends ./layout/index 
+
+block slider
+    .slider
+        h1 Rio de Jaineiro 
+        em Aventura
+
+block contenido     
+    main.container.mt-5   
+        h2.text-center.mb-5 Sobre Nosotros   
+        .row.mb-5
+            .col-md-6
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo sapien eget eros congue gravida. Maecenas purus eros, ornare nec enim eget, luctus auctor eros. Nulla facilisi. Sed bibendum libero a fermentum pulvinar
+                p In bibendum elit magna, eu faucibus felis molestie nec. Donec orci ante, imperdiet vel porta non, vehicula vestibulum eros. Donec in pulvinar urna, quis posuere erat. Etiam id ante tincidunt, tristique erat sit amet, egestas eros. Duis ipsum ex, tempus eu faucibus sed, bibendum nec metus. Nulla iaculis dolor nunc, vel fringilla massa commodo vitae. Duis a tempor nisl, vel accumsan dui. Morbi pretium facilisis leo, in vestibulum neque sodales et
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+        
+        include ./layout/blockViajes
+
+    .descuento
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaje a canada 
+                        p.fecha 20 de Marzo de 2026 - 28 de Marzo de 2026
+                        p.precio $2,500.00 MX
+
+    .conteiner 
+        h2.mt-5.text-center Testimoniales
+        include ./layout/blockTestimoniales
+            

@@ -1,0 +1,56 @@
+extends ./layout/index 
+
+block contenido     
+    main.container.mt-5     
+        h1.text-center.mt-5 #{pagina}
+
+        blockquote.text-center Lee sobre nuestros clientes y sus experiencias
+        include ./layout/blockTestimoniales
+        
+        .row
+            .col-md-12
+                h2.text-center.my-4 Agregar un Testimonial 
+
+        // Mostrar errores
+        if errores && errores.length
+            .alert.alert-danger
+                ul.mb-0
+                    each error in errores
+                        li= error.mensaje
+
+
+        .row.justify-content-center
+            .col-md-8
+                form(action="/testimoniales" method="POST")
+                    
+                    .mb-3
+                        label.form-label(for="nombre") Nombre
+                        input#nombre.form-control(
+                            type="text",
+                            placeholder="Tu Nombre",
+                            name="nombre",
+                            value=nombre || ''
+                        )
+
+                    .mb-3
+                        label.form-label(for="correo") Correo Electrónico
+                        input#correo.form-control(
+                            type="email",
+                            placeholder="Tu Correo",
+                            name="correo",
+                            value=correo || ''
+                        )
+
+                    .mb-3
+                        label.form-label(for="mensaje") Mensaje
+                        textarea#mensaje.form-control(
+                            name="mensaje",
+                            placeholder="Tu Mensaje",
+                            rows="3"
+                        ) #{mensaje || ''}
+
+                    .text-center
+                        input.btn.btn-success.w-100(
+                            type="submit",
+                            value="Enviar Testimonial"
+                        )
