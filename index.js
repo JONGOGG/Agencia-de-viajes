@@ -39,6 +39,6 @@ app.use('/', router)
 
 
 
-app.listen(port, ()=>{
+app.listen(port, '0.0.0.0', ()=>{
     console.log(`El servidor esta funcionado en el puerto ${port}`)
 })
