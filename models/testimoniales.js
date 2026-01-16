@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/db.js';
 
-const Testimonial = db.define('testimoniales', {
+const Testimoniales = db.define('testimoniales', { // <-- el nombre exacto de la tabla
   nombre: {
     type: DataTypes.STRING,
     allowNull: false
@@ -14,6 +14,9 @@ const Testimonial = db.define('testimoniales', {
     type: DataTypes.TEXT,
     allowNull: false
   }
+}, {
+  tableName: 'testimoniales', // fuerza usar este nombre
+  timestamps: false
 });
 
-export default Testimonial;
+export default Testimoniales;
