@@ -60,7 +60,7 @@ const paginaDetalleViaje = async (req, res) => {
     const { slug } = req.params;
 
     try {
-        const viaje = await Viaje.findOne({
+        const viaje = await Viajes.findOne({
             where: { slug }
         });
 
