@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/db.js';
 
-const Viaje = db.define('Viaje', {
+const Viajes = db.define('Viajes', {
   titulo: {
     type: DataTypes.STRING,
     allowNull: false
