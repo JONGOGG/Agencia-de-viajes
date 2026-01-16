@@ -34,6 +34,9 @@ const Viaje = db.define('Viaje', {
     type: DataTypes.STRING,
     allowNull: false
   }
+}, {
+  tableName: 'Viajes',  // ✅ Agrega esto
+  timestamps: false
 });
 
 export default Viaje;
