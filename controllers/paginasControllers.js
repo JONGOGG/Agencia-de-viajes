@@ -31,7 +31,7 @@ const paginaNosotros = (req, res) => {  // req -- lo que enviamos // res -- lo q
 
 const paginaViajes = async (req, res) => {  // req -- lo que enviamos // res -- lo que express nos responde
     // Consultar BD
-    const viajes = await Viaje.findAll();
+    const viajes = await Viajes.findAll();
 
     console.log(viajes)
 

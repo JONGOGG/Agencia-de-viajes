@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/db.js';
 
-const Testimoniales = db.define('testimoniales', {
+const Testimoniales = db.define('Testimoniales', {
   nombre: {
     type: DataTypes.STRING,
     allowNull: false
@@ -15,7 +15,7 @@ const Testimoniales = db.define('testimoniales', {
     allowNull: false
   }
 }, {
-  tableName: 'Testimoniales', // ✅ Cambia a mayúscula para coincidir con la BD
+  tableName: 'testimoniales',  // ✅ nombre exacto de la tabla en minúscula
   timestamps: false
 });
 
