@@ -39,4 +39,4 @@ const Viaje = db.define('Viaje', {
   timestamps: false
 });
 
-export default Viaje;
+export default Viajes;
